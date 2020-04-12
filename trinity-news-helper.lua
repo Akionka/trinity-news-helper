@@ -379,7 +379,7 @@ function checkUpdates()
 end
 
 function update()
-  downloadUrlToFile('https://github.com/akionka/trinity-news-helper/releases/download/'..lastTagAvaliable..'/checker.lua', thisScript()['path'], function(_, status, _, _)
+  downloadUrlToFile('https://github.com/akionka/trinity-news-helper/releases/download/'..lastTagAvaliable..'/trinity-news-helper.lua', thisScript()['path'], function(_, status, _, _)
     if status == 6 then
       msg('Новая версия установлена! Чтобы скрипт обновился нужно либо перезайти в игру, либо ...')
       msg('... если у вас есть автоперезагрузка скриптов, то новая версия уже готова и снизу вы увидите приветственное сообщение.')
