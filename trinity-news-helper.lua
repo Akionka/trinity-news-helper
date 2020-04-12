@@ -235,10 +235,10 @@ function imgui.OnDrawFrame()
       elseif selectedTab == 3 then
         imgui.BeginGroup()
           imgui.BeginChild('Center panel', imgui.ImVec2(0, 0), true)
-            imgui.Text('Название: Arizona News Helper')
+            imgui.Text('Название: Trinity News Helper')
             imgui.Text('Автор: Akionka')
             imgui.Text('Версия: '..thisScript()['version'])
-            imgui.Text('Команды: /acad, /anewsh')
+            imgui.Text('Команды: /tcad, /tnewsh')
             if updatesAvaliable then
               if imgui.Button('Скачать обновление', imgui.ImVec2(150, 0)) then
                 update()
@@ -263,7 +263,7 @@ function imgui.OnDrawFrame()
     local resX, resY = getScreenResolution()
     imgui.SetNextWindowSize(imgui.ImVec2(576, -imgui.GetItemsLineHeightWithSpacing()*6), 2)
     imgui.SetNextWindowPos(imgui.ImVec2(resX/2, resY/2), 2, imgui.ImVec2(0.5, 0.5))
-    imgui.Begin('Village News Helper v'..thisScript()['version']..' | Добавление нового объявления', addNewAdWindowState, imgui.WindowFlags.NoResize)
+    imgui.Begin('Trinity News Helper v'..thisScript()['version']..' | Добавление нового объявления', addNewAdWindowState, imgui.WindowFlags.NoResize)
       imgui.Text('Хотите добавить новое объявление?')
       imgui.Text('Текст оригинального объявления: '..addNewAdOrigBuffer.v)
       if imgui.Checkbox('Отправлять как есть', acceptAsIsBuffer) then acceptAsIsBuffer.v = not acceptAsIsBuffer.v end
