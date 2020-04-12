@@ -133,7 +133,7 @@ function imgui.OnDrawFrame()
     local resX, resY = getScreenResolution()
     imgui.SetNextWindowSize(imgui.ImVec2(700, 350), 2)
     imgui.SetNextWindowPos(imgui.ImVec2(resX/2, resY/2), 2, imgui.ImVec2(0.5, 0.5))
-    imgui.Begin('Village News Helper v'..thisScript()['version'], mainWindowState --[[imgui.WindowFlags.NoResize]])
+    imgui.Begin('Trinity News Helper v'..thisScript()['version'], mainWindowState)
       imgui.BeginGroup()
         imgui.BeginChild('Left Panel', imgui.ImVec2(100, 0), true)
           if imgui.Selectable('Списки', selectedTab == 1) then selectedTab = 1  end
