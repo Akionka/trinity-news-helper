@@ -15,7 +15,9 @@ local encoding = require 'encoding'
 encoding.default = 'cp1251'
 local u8 = encoding.UTF8
 local imgui = require 'imgui'
+local v = require 'semver'
 
+local prefix = 'TNH'
 local updatesAvaliable = false
 local lastTagAvaliable = '1.0.0'
 
@@ -389,8 +391,8 @@ function update()
   end)
 end
 
-function msg(msg)
-  sampAddChatMessage(msg, -1)
+function msg(text)
+  sampAddChatMessage(u8:decode('['..prefix..']: '..text), -1)
 end
 
 function stringToLower(s)
