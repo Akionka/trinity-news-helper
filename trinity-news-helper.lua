@@ -89,7 +89,6 @@ function sampev.onShowDialog(id, style, title, btn1, btn2, text)
         sampSendDialogResponse(id, 1, 0, '')
         return false
       else
-        msg('non as is')
         sampSendDialogResponse(id, 0, 0, '')
         return false
       end
