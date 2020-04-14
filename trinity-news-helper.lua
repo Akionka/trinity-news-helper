@@ -23,6 +23,7 @@ local lastTagAvaliable = '1.0.0'
 
 local doCatchAds = false
 local lastAdText, lastEditedAdText
+local flooding = false
 
 local mainWindowState = imgui.ImBool(false)
 local addNewAdWindowState = imgui.ImBool(false)
@@ -51,6 +52,13 @@ local data = {
     autoAddNewAds = false,
   }
 }
+
+function sampev.onSendCommand(cmd)
+  if cmd == '/admod' then
+    if flooding then return false end
+    flooding = true
+  end
+end
 
 function sampev.onServerMessage(color, text)
   if not doCatchAds or sampIsDialogActive() or isGamePaused() or sampIsChatInputActive() then return end
@@ -304,6 +312,7 @@ function main()
 
   applyCustomStyle()
   loadData()
+  lua_thread.create(function() while true do wait(0) if flooding then wait(200) flooding = false end end end)
 
   doCatchAds = data['settings']['autoStart'] or false
   if data['settings']['autoCheckUpdates'] then checkUpdates() end
