@@ -1,6 +1,6 @@
 script_name('Trinity News Helper')
 script_author('akionka')
-script_version('1.0.0')
+script_version('1.0.1')
 script_moonloader(27)
 
 require 'libstd.deps' {
