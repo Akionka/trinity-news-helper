@@ -133,7 +133,6 @@ function sampev.onShowDialog(id, style, title, btn1, btn2, text)
     sampSendDialogResponse(id, 1, 0, '')
     return false
   end
-  return {id, style, title..' | '..id, btn1, btn2, text}
 end
 
 function imgui.OnDrawFrame()
