@@ -262,7 +262,7 @@ function imgui.OnDrawFrame()
             if imgui.Button('Группа ВКонтакте', imgui.ImVec2(150, 0)) then os.execute('explorer "https://vk.com/akionkamods"') end
             if imgui.Button('Bug report [VK]', imgui.ImVec2(150, 0)) then os.execute('explorer "https://vk.com/akionka"') end
             imgui.SameLine()
-            if imgui.Button('Bug report [Telegram]', imgui.ImVec2(150, 0)) then os.execute('explorer "https://teleg.run/akionka"') end
+            if imgui.Button('Bug report [Telegram]', imgui.ImVec2(150, 0)) then os.execute('explorer "https://t.me/akionka"') end
           imgui.EndChild()
         imgui.EndGroup()
       end
@@ -393,7 +393,7 @@ function update()
     if status == 6 then
       msg('Новая версия установлена! Чтобы скрипт обновился нужно либо перезайти в игру, либо ...')
       msg('... если у вас есть автоперезагрузка скриптов, то новая версия уже готова и снизу вы увидите приветственное сообщение.')
-      msg('Если что-то пошло не так, то сообщите мне об этом в VK или Telegram > {2980b0}vk.com/akionka teleg.run/akionka{FFFFFF}.')
+      msg('Если что-то пошло не так, то сообщите мне об этом в VK или Telegram > {2980b0}vk.com/akionka t.me/akionka{FFFFFF}.')
       thisScript()['reload']()
     end
   end)
